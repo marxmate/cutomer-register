@@ -6,6 +6,7 @@ import validation.PhoneNumberValidator;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -35,7 +36,7 @@ public class InputFileReader {
         return s;
     }
 
-    private String formatPhoneNumber(String phoneNumber) {
+    protected String formatPhoneNumber(String phoneNumber) {
         if (formatString(phoneNumber).equals("Empty")) {
             phoneNumber = "Empty";
         } else if (phoneNumberValidator.validate(formatString(phoneNumber))) {
@@ -54,15 +55,16 @@ public class InputFileReader {
         return phoneNumber;
     }
 
-    private String formatEmailAddress(String emailAddress) {
+    protected String formatEmailAddress(String emailAddress) {
         return formatString(emailAddress).equals("Empty") ? "Empty" :
                 (emailAddressValidator.validate(formatString(emailAddress)) ? formatString(emailAddress) : "INVALID");
     }
 
-    public ArrayList<String> readFromFile(String fileName) throws URISyntaxException, FileNotFoundException {
+    public ArrayList<Customer> readFromFile(String fileName) throws URISyntaxException, FileNotFoundException {
         ArrayList<Customer> customerList = new ArrayList<>();
-        File file = new File(this.getClass().getResource(fileName).toURI());
-        Scanner scanner = new Scanner(file);
+        InputStream inputStream = this.getClass().getResourceAsStream(fileName);
+        Scanner scanner = new Scanner(inputStream);
+        scanner.nextLine(); //first line contains fields
         while (scanner.hasNextLine()) {
             String[] data = scanner.nextLine().split("[:,]+", -1);
             Customer customer = new Customer(
@@ -71,7 +73,7 @@ public class InputFileReader {
                     formatEmailAddress(data[2]));
             customerList.add(customer);
         }
-        return null;
+        return customerList;
     }
 
 

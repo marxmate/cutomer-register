@@ -40,7 +40,7 @@ public class PhoneNumberValidatorTest {
 
         for (String temp : invalidPhoneNumbers) {
             boolean valid = phoneNumberValidator.validate(temp);
-            System.out.println("Email is invalid : " + temp + " , " + valid);
+            System.out.println("Phone number invalid : " + temp + " , " + valid);
             Assert.assertEquals(valid, false);
         }
     }

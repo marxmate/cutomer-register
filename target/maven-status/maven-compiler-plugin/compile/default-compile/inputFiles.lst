@@ -1,4 +1,9 @@
-D:\MM\hatosugar kft\PROJEKTEK\customer-register\src\main\java\input\Customer.java
-D:\MM\hatosugar kft\PROJEKTEK\customer-register\src\main\java\input\InputFileReader.java
-D:\MM\hatosugar kft\PROJEKTEK\customer-register\src\main\java\Main.java
-D:\MM\hatosugar kft\PROJEKTEK\customer-register\src\main\java\validation\EmailValidator.java
+C:\Users\MM\IdeaProjects\cutomer-register\src\main\java\output\OutputFileWriter.java
+C:\Users\MM\IdeaProjects\cutomer-register\src\main\java\Main.java
+C:\Users\MM\IdeaProjects\cutomer-register\src\main\java\validation\Validator.java
+C:\Users\MM\IdeaProjects\cutomer-register\src\main\java\data\Customer.java
+C:\Users\MM\IdeaProjects\cutomer-register\src\main\java\validation\PhoneNumberValidator.java
+C:\Users\MM\IdeaProjects\cutomer-register\src\main\java\validation\EmailAddressValidator.java
+C:\Users\MM\IdeaProjects\cutomer-register\src\main\java\input\ConsoleInputReader.java
+C:\Users\MM\IdeaProjects\cutomer-register\src\main\java\input\InputFileReader.java
+C:\Users\MM\IdeaProjects\cutomer-register\src\main\java\input\Action.java

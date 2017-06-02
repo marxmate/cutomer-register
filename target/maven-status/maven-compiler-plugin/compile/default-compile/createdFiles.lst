@@ -1,4 +1,10 @@
+validation\Validator.class
 input\InputFileReader.class
 Main.class
-input\Customer.class
-validation\EmailValidator.class
+output\OutputFileWriter.class
+validation\EmailAddressValidator.class
+validation\PhoneNumberValidator.class
+input\Action.class
+input\ConsoleInputReader.class
+Main$1.class
+data\Customer.class
